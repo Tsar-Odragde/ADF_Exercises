@@ -1,0 +1,9 @@
+{
+	"name": "ADFExercisesCourse03",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "bcc9aad1-0db1-4696-850a-88f92bec7bf0",
+		"tenantId": "b6525648-dcee-4022-91c1-b979d85d12b1"
+	}
+}
