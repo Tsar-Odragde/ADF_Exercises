@@ -5,19 +5,11 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "MoviesADLS",
-						"type": "DatasetReference"
-					},
 					"name": "MoviesADLS"
 				}
 			],
 			"sinks": [
 				{
-					"dataset": {
-						"referenceName": "DelimitedText1",
-						"type": "DatasetReference"
-					},
 					"name": "sink1"
 				}
 			],
@@ -50,8 +42,7 @@
 				"          Year as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> MoviesADLS",
+				"     validateSchema: false) ~> MoviesADLS",
 				"MoviesADLS select(mapColumn(",
 				"          Title = Film,",
 				"          Genre,",
@@ -77,22 +68,11 @@
 				"aggregate1 alterRow(upsertIf(true())) ~> alterRow1",
 				"alterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          Film as string,",
-				"          Genre as string,",
-				"          {Lead Studio} as string,",
-				"          {Audience score %} as string,",
-				"          Profitability as string,",
-				"          {Rotten Tomatoes %} as string,",
-				"          {Worldwide Gross} as string,",
-				"          Year as string",
-				"     ),",
-				"     umask: 0022,",
-				"     preCommands: [],",
-				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     saveOrder: 1) ~> sink1"
+				"     saveOrder: 1,",
+				"     preCommands: [],",
+				"     postCommands: []) ~> sink1"
 			]
 		}
 	}
