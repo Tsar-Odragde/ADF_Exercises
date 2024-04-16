@@ -18,7 +18,11 @@
 						"referenceName": "AzureSynapseAnalyticsTable1",
 						"type": "DatasetReference"
 					},
-					"name": "ASA"
+					"name": "ASA",
+					"rejectedDataLinkedService": {
+						"referenceName": "ADLS_Bronze",
+						"type": "LinkedServiceReference"
+					}
 				}
 			],
 			"transformations": [
@@ -79,10 +83,12 @@
 				"     validateSchema: false,",
 				"     deletable:false,",
 				"     insertable:true,",
-				"     updateable:false,",
-				"     upsertable:false,",
+				"     updateable:true,",
+				"     upsertable:true,",
+				"     keys:['Genre','Year'],",
 				"     format: 'table',",
-				"     staged: false,",
+				"     staged: true,",
+				"     allowCopyCommand: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     errorHandlingOption: 'allErrors',",
