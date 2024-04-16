@@ -1,0 +1,14 @@
+{
+	"name": "ADLS_Bronze",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://adlsdeadfcoursera03.dfs.core.windows.net/"
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeADLScon",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
