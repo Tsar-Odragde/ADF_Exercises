@@ -1,0 +1,7 @@
+{
+	"name": "ADLS_ADFcon",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/45a05d71-bba7-4dfb-823f-58591e01ad94/resourceGroups/DECert_ADF_03/providers/Microsoft.Storage/storageAccounts/adlsdeadfcoursera03",
+		"groupId": "dfs"
+	}
+}
