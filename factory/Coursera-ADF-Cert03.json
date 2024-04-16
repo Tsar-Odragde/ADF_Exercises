@@ -1,0 +1,9 @@
+{
+	"name": "Coursera-ADF-Cert03",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "db4de80e-3cdf-4126-a5cc-d407047dadf7",
+		"tenantId": "b6525648-dcee-4022-91c1-b979d85d12b1"
+	}
+}
